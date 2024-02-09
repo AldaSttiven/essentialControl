@@ -1,0 +1,38 @@
+{
+    "sourceFile": "lib/screen/principal/widgets/appBarCustom.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1695482783142,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695482852062,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n }\r\n \r\n class _AppBarCustomState extends State<AppBarCustom> {\r\n   @override\r\n-  Widget build(BuildContext context) {\r\n+  AppBar build(BuildContext context) {\r\n     return AppBar(\r\n       iconTheme:\r\n           IconThemeData(color: darkLightTheme().getPrimaryColor(), size: 20),\r\n       backgroundColor: Colors.black87.withOpacity(0.04),\r\n"
+                },
+                {
+                    "date": 1695482873662,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n }\r\n \r\n class _AppBarCustomState extends State<AppBarCustom> {\r\n   @override\r\n-  AppBar build(BuildContext context) {\r\n+  PreferredSizeWidget build(BuildContext context) {\r\n     return AppBar(\r\n       iconTheme:\r\n           IconThemeData(color: darkLightTheme().getPrimaryColor(), size: 20),\r\n       backgroundColor: Colors.black87.withOpacity(0.04),\r\n"
+                },
+                {
+                    "date": 1695482948362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,15 +11,15 @@\n \r\n class _AppBarCustomState extends State<AppBarCustom> {\r\n   @override\r\n   PreferredSizeWidget build(BuildContext context) {\r\n-    return AppBar(\r\n+    return PreferredSize(child: AppBar(\r\n       iconTheme:\r\n           IconThemeData(color: darkLightTheme().getPrimaryColor(), size: 20),\r\n       backgroundColor: Colors.black87.withOpacity(0.04),\r\n-      title: Text(\"essential_control PC\",\r\n+      title: Text(widget.title,\r\n           style: TextStyle(\r\n               color: darkLightTheme().getPrimaryColor(), fontSize: 15)),\r\n       elevation: 0,\r\n-    );\r\n+    ), preferredSize: Size(20, 10)) ;\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1695482973910,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,9 @@\n class _AppBarCustomState extends State<AppBarCustom> {\r\n   @override\r\n   PreferredSizeWidget build(BuildContext context) {\r\n     return PreferredSize(\r\n+      preferredSize: Size(20, 10),\r\n         child: AppBar(\r\n           iconTheme: IconThemeData(\r\n               color: darkLightTheme().getPrimaryColor(), size: 20),\r\n           backgroundColor: Colors.black87.withOpacity(0.04),\r\n@@ -21,7 +22,7 @@\n               style: TextStyle(\r\n                   color: darkLightTheme().getPrimaryColor(), fontSize: 15)),\r\n           elevation: 0,\r\n         ),\r\n-        preferredSize: Size(20, 10));\r\n+        );\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1695483143283,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,16 +13,8 @@\n   @override\r\n   PreferredSizeWidget build(BuildContext context) {\r\n     return PreferredSize(\r\n       preferredSize: const Size(20, 10),\r\n-      child: AppBar(\r\n-        iconTheme:\r\n-            IconThemeData(color: darkLightTheme().getPrimaryColor(), size: 20),\r\n-        backgroundColor: Colors.black87.withOpacity(0.04),\r\n-        title: Text(widget.title,\r\n-            style: TextStyle(\r\n-                color: darkLightTheme().getPrimaryColor(), fontSize: 15)),\r\n-        elevation: 0,\r\n-      ),\r\n+      child: Container()\r\n     );\r\n   }\r\n }\r\n"
+                }
+            ],
+            "date": 1695482783142,
+            "name": "Commit-0",
+            "content": "import 'package:essential_control_pc/style/styles/dark_ligth_theme.dart';\r\nimport 'package:flutter/material.dart';\r\n\r\nclass AppBarCustom extends StatefulWidget {\r\n  String title;\r\n  AppBarCustom(this.title, {super.key});\r\n\r\n  @override\r\n  State<AppBarCustom> createState() => _AppBarCustomState();\r\n}\r\n\r\nclass _AppBarCustomState extends State<AppBarCustom> {\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return AppBar(\r\n      iconTheme:\r\n          IconThemeData(color: darkLightTheme().getPrimaryColor(), size: 20),\r\n      backgroundColor: Colors.black87.withOpacity(0.04),\r\n      title: Text(\"essential_control PC\",\r\n          style: TextStyle(\r\n              color: darkLightTheme().getPrimaryColor(), fontSize: 15)),\r\n      elevation: 0,\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

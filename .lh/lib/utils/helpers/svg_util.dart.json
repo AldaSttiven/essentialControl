@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/utils/helpers/svg_util.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1694893465699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1694893465699,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\nimport 'package:flutter_svg/svg.dart';\r\n\r\nclass SvgUtil {\r\n  SvgPicture buildSvgPicture(String path, Color color, double size) {\r\n    return SvgPicture.asset(\r\n      path,\r\n      width: size,\r\n      allowDrawingOutsideViewBox: true,\r\n      color: color,\r\n    );\r\n  }\r\n\r\n  SvgPicture buildSvgPictureOutColor(String path, double size) {\r\n    return SvgPicture.asset(\r\n      path,\r\n      width: size,\r\n      allowDrawingOutsideViewBox: true,\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

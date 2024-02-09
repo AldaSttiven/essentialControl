@@ -1,0 +1,26 @@
+{
+    "sourceFile": "lib/main.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1694886339282,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1694886866714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,23 +1,26 @@\n+import 'package:essential_control_pc/routes/routes.dart';\r\n import 'package:essential_control_pc/screens/principal/principal.dart';\r\n+import 'package:essential_control_pc/style/styles/dark_ligth_theme.dart';\r\n+import 'package:essential_control_pc/utils/bloc/dark_mode/dark_mode_bloc.dart';\r\n import 'package:flutter/material.dart';\r\n import 'package:flutter/services.dart';\r\n+import 'package:flutter_bloc/flutter_bloc.dart';\r\n \r\n void main() async {\r\n   WidgetsFlutterBinding.ensureInitialized();\r\n \r\n   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);\r\n \r\n-  await SharedPrerencesSettins().initPrefs();\r\n-  await SharedPrerencesClockSettins().initPrefs();\r\n+  //await SharedPrerencesSettins().initPrefs();\r\n \r\n   runApp(\r\n     MultiBlocProvider(\r\n       providers: [\r\n-        BlocProvider<ClockBloc>(\r\n-            create: (_) => ClockBloc()), // Proporciona ClockBloc aquí\r\n+        BlocProvider<DarkModeBloc>(\r\n+            create: (_) => DarkModeBloc()), // Proporciona ClockBloc aquí\r\n       ],\r\n-      child: MyApp(),\r\n+      child: const MyApp(),\r\n     ),\r\n   );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1694887277628,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import 'package:essential_control_pc/routes/routes.dart';\r\n import 'package:essential_control_pc/screens/principal/principal.dart';\r\n import 'package:essential_control_pc/style/styles/dark_ligth_theme.dart';\r\n import 'package:essential_control_pc/utils/bloc/dark_mode/dark_mode_bloc.dart';\r\n+import 'package:essential_control_pc/utils/shared_preferences/s_p_settings.dart';\r\n import 'package:flutter/material.dart';\r\n import 'package:flutter/services.dart';\r\n import 'package:flutter_bloc/flutter_bloc.dart';\r\n \r\n@@ -10,9 +11,9 @@\n   WidgetsFlutterBinding.ensureInitialized();\r\n \r\n   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);\r\n \r\n-  //await SharedPrerencesSettins().initPrefs();\r\n+  await SharedPrerencesSettins().initPrefs();\r\n \r\n   runApp(\r\n     MultiBlocProvider(\r\n       providers: [\r\n"
+                }
+            ],
+            "date": 1694886339282,
+            "name": "Commit-0",
+            "content": "import 'package:essential_control_pc/screens/principal/principal.dart';\r\nimport 'package:flutter/material.dart';\r\nimport 'package:flutter/services.dart';\r\n\r\n\r\nvoid main() async {\r\n  WidgetsFlutterBinding.ensureInitialized();\r\n\r\n  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);\r\n\r\n  await SharedPrerencesSettins().initPrefs();\r\n  await SharedPrerencesClockSettins().initPrefs();\r\n\r\n  runApp(\r\n    MultiBlocProvider(\r\n      providers: [\r\n        BlocProvider<ClockBloc>(\r\n            create: (_) => ClockBloc()), // Proporciona ClockBloc aquí\r\n      ],\r\n      child: MyApp(),\r\n    ),\r\n  );\r\n}\r\n\r\nclass MyApp extends StatelessWidget {\r\n  const MyApp({super.key});\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return MaterialApp(\r\n      theme: ThemeData(\r\n        primaryColor: darkLightTheme().getPrimaryColor(),\r\n        fontFamily: \"Montserrat\",\r\n        appBarTheme: AppBarTheme(color: darkLightTheme().getPrimaryColor()),\r\n      ),\r\n      home: const Scaffold(body: Principal()),\r\n      debugShowCheckedModeBanner: false,\r\n      onGenerateRoute: (_) => Principal.route(),\r\n      routes: getApplicationRoutes(),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

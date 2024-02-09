@@ -1,0 +1,58 @@
+{
+    "sourceFile": "lib/screen/principal/principal.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1694887805368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1694889239943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,11 +15,13 @@\n class _PrincipalState extends State<Principal> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n-      appBar: AppBar(title: const Text(\"essential_control PC\")),\r\n+      appBar: appBar(),\r\n       body: const Center(\r\n         child: Text(\"essential_control PC\"),\r\n       ),\r\n     );\r\n   }\r\n+\r\n+  AppBar appBar() => AppBar(title: const Text(\"essential_control PC\"));\r\n }\r\n"
+                },
+                {
+                    "date": 1694889420096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n import 'package:flutter/material.dart';\r\n \r\n+import '../../utils/widgets/drawerSideCustom.dart';\r\n+\r\n class Principal extends StatefulWidget {\r\n   const Principal({super.key});\r\n   static Route route() {\r\n     return MaterialPageRoute<void>(builder: (_) => const Principal());\r\n@@ -22,6 +24,19 @@\n       ),\r\n     );\r\n   }\r\n \r\n+  Widget myDrawer() {\r\n+    return DrawerSideCustom(\r\n+      context: context,\r\n+      adminPhotos: true,\r\n+      adminUserInfo: false,\r\n+      assingFarm: true,\r\n+      blockedWifi: true,\r\n+      closeSesion: true,\r\n+      localdata: false,\r\n+      routePaint: 'menuFormularioPage',\r\n+    );\r\n+  }\r\n+\r\n   AppBar appBar() => AppBar(title: const Text(\"essential_control PC\"));\r\n }\r\n"
+                },
+                {
+                    "date": 1694889433812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,9 @@\n class _PrincipalState extends State<Principal> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n+      drawer: myDrawer(),\r\n       appBar: appBar(),\r\n       body: const Center(\r\n         child: Text(\"essential_control PC\"),\r\n       ),\r\n"
+                },
+                {
+                    "date": 1694889758358,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import 'package:flutter/material.dart';\r\n+import 'package:flutter_bloc/flutter_bloc.dart';\r\n \r\n import '../../utils/widgets/drawerSideCustom.dart';\r\n \r\n class Principal extends StatefulWidget {\r\n@@ -16,15 +17,25 @@\n \r\n class _PrincipalState extends State<Principal> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return Scaffold(\r\n+    return \r\n+  }\r\n+\r\n+  Widget bloc_listener() {\r\n+    return MultiBlocListener(listeners: [\r\n+      BlocListener<DarkModeBloc, DarkModeState>(\r\n+        listener: ((context, state) {\r\n+          setState(() {});\r\n+        }),\r\n+      ),\r\n+    ], child: Scaffold(\r\n       drawer: myDrawer(),\r\n       appBar: appBar(),\r\n       body: const Center(\r\n         child: Text(\"essential_control PC\"),\r\n       ),\r\n-    );\r\n+    ));\r\n   }\r\n \r\n   Widget myDrawer() {\r\n     return DrawerSideCustom(\r\n"
+                },
+                {
+                    "date": 1694889769198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import 'package:essential_control_pc/utils/bloc/dark_mode/dark_mode_bloc.dart';\r\n import 'package:flutter/material.dart';\r\n import 'package:flutter_bloc/flutter_bloc.dart';\r\n \r\n import '../../utils/widgets/drawerSideCustom.dart';\r\n@@ -17,25 +18,27 @@\n \r\n class _PrincipalState extends State<Principal> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return \r\n+    return bloc_listener();\r\n   }\r\n \r\n   Widget bloc_listener() {\r\n-    return MultiBlocListener(listeners: [\r\n-      BlocListener<DarkModeBloc, DarkModeState>(\r\n-        listener: ((context, state) {\r\n-          setState(() {});\r\n-        }),\r\n-      ),\r\n-    ], child: Scaffold(\r\n-      drawer: myDrawer(),\r\n-      appBar: appBar(),\r\n-      body: const Center(\r\n-        child: Text(\"essential_control PC\"),\r\n-      ),\r\n-    ));\r\n+    return MultiBlocListener(\r\n+        listeners: [\r\n+          BlocListener<DarkModeBloc, DarkModeState>(\r\n+            listener: ((context, state) {\r\n+              setState(() {});\r\n+            }),\r\n+          ),\r\n+        ],\r\n+        child: Scaffold(\r\n+          drawer: myDrawer(),\r\n+          appBar: appBar(),\r\n+          body: const Center(\r\n+            child: Text(\"essential_control PC\"),\r\n+          ),\r\n+        ));\r\n   }\r\n \r\n   Widget myDrawer() {\r\n     return DrawerSideCustom(\r\n"
+                },
+                {
+                    "date": 1694889811370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import 'package:essential_control_pc/style/styles/dark_ligth_theme.dart';\r\n import 'package:essential_control_pc/utils/bloc/dark_mode/dark_mode_bloc.dart';\r\n import 'package:flutter/material.dart';\r\n import 'package:flutter_bloc/flutter_bloc.dart';\r\n \r\n@@ -31,8 +32,9 @@\n             }),\r\n           ),\r\n         ],\r\n         child: Scaffold(\r\n+          backgroundColor: darkLightTheme().getBackGround(),\r\n           drawer: myDrawer(),\r\n           appBar: appBar(),\r\n           body: const Center(\r\n             child: Text(\"essential_control PC\"),\r\n"
+                },
+                {
+                    "date": 1694889878010,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,10 +35,10 @@\n         child: Scaffold(\r\n           backgroundColor: darkLightTheme().getBackGround(),\r\n           drawer: myDrawer(),\r\n           appBar: appBar(),\r\n-          body: const Center(\r\n-            child: Text(\"essential_control PC\"),\r\n+          body: Center(\r\n+            child: Text(\"essential_control PC\", style: TextStyle(color: darkLightTheme().textPrimary()),),\r\n           ),\r\n         ));\r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1694889984002,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,12 +19,12 @@\n \r\n class _PrincipalState extends State<Principal> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return bloc_listener();\r\n+    return blocListener();\r\n   }\r\n \r\n-  Widget bloc_listener() {\r\n+  Widget blocListener() {\r\n     return MultiBlocListener(\r\n         listeners: [\r\n           BlocListener<DarkModeBloc, DarkModeState>(\r\n             listener: ((context, state) {\r\n@@ -44,10 +44,9 @@\n           ),\r\n         ));\r\n   }\r\n \r\n-  Widget myDrawer() {\r\n-    return DrawerSideCustom(\r\n+  Widget myDrawer()  => DrawerSideCustom(\r\n       context: context,\r\n       adminPhotos: true,\r\n       adminUserInfo: false,\r\n       assingFarm: true,\r\n@@ -55,8 +54,8 @@\n       closeSesion: true,\r\n       localdata: false,\r\n       routePaint: 'menuFormularioPage',\r\n     );\r\n-  }\r\n+  \r\n \r\n   AppBar appBar() => AppBar(title: const Text(\"essential_control PC\"));\r\n }\r\n"
+                },
+                {
+                    "date": 1694890006527,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,10 +22,10 @@\n   Widget build(BuildContext context) {\r\n     return blocListener();\r\n   }\r\n \r\n-  Widget blocListener() {\r\n-    return MultiBlocListener(\r\n+  Widget blocListener() =>\r\n+     MultiBlocListener(\r\n         listeners: [\r\n           BlocListener<DarkModeBloc, DarkModeState>(\r\n             listener: ((context, state) {\r\n               setState(() {});\r\n@@ -42,9 +42,9 @@\n               style: TextStyle(color: darkLightTheme().textPrimary()),\r\n             ),\r\n           ),\r\n         ));\r\n-  }\r\n+  \r\n \r\n   Widget myDrawer() => DrawerSideCustom(\r\n         context: context,\r\n         adminPhotos: true,\r\n"
+                },
+                {
+                    "date": 1694893874268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,6 +53,6 @@\n         localdata: false,\r\n         routePaint: 'menuFormularioPage',\r\n       );\r\n \r\n-  AppBar appBar() => AppBar(title: const Text(\"essential_control PC\"));\r\n+  AppBar appBar() => AppBar(elevation:0, const Text(\"essential_control PC\"));\r\n }\r\n"
+                }
+            ],
+            "date": 1694887805368,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\n\r\nclass Principal extends StatefulWidget {\r\n  const Principal({super.key});\r\n  static Route route() {\r\n    return MaterialPageRoute<void>(builder: (_) => const Principal());\r\n  }\r\n\r\n  static const String routeName = \"principal\";\r\n\r\n  @override\r\n  State<Principal> createState() => _PrincipalState();\r\n}\r\n\r\nclass _PrincipalState extends State<Principal> {\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Scaffold(\r\n      appBar: AppBar(title: const Text(\"essential_control PC\")),\r\n      body: const Center(\r\n        child: Text(\"essential_control PC\"),\r\n      ),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

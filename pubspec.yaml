@@ -1,0 +1,65 @@
+name: essential_control_pc
+description: A new Flutter project.
+
+# Prevent accidental publishing to pub.dev.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.5 <3.0.0'
+
+dependencies:
+  archive: ^3.4.10
+  bitsdojo_window: ^0.1.5
+  bloc: ^8.1.2
+  device_info_plus: ^8.2.2
+  equatable: ^2.0.5
+  floating_snackbar: ^1.0.3+1
+  flutter:
+    sdk: flutter
+  flutter_barcode_scanner: ^2.0.0
+  flutter_bloc: ^8.1.3
+  flutter_localizations:
+    sdk: flutter
+  flutter_mrz_scanner: ^2.1.0
+  flutter_svg: ^1.1.6
+  get_it: ^7.6.7
+  http: ^1.1.0
+  loading_animation_widget: ^1.2.0+4
+  network_info_plus: ^3.0.5
+  path_provider: ^2.0.9
+  permission_handler: ^10.3.0
+  process_run: ^0.13.3
+  qr_flutter: ^4.1.0
+  sembast: ^3.5.0+1
+  shared_preferences: ^2.2.0
+  uuid: ^4.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+  msix: ^3.16.7
+
+msix_config:
+  display_name: EssentialControl
+  publisher_display_name: EssentialTech
+  identity_name: EssentialTech.suite.EssentialControl
+  msix_version: 1.0.0.0
+  logo_path: C:\Users\aldas\Downloads\icons8-conexiones-cerebrales-96.png
+  capabilities: internetClient, location, microphone, webcam
+  install_certificate: false
+
+flutter:
+  uses-material-design: true
+
+  # Enable generation of localized Strings from arb files.
+  generate: true
+
+  assets:
+    # Add assets from the images directory to the application.
+    - assets/images/
+    - assets/icon/
+    - assets/icon_media/

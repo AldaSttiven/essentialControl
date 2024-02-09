@@ -1,0 +1,22 @@
+{
+    "sourceFile": "lib/utils/bloc/dark_mode/dark_mode_bloc.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1694886824458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1694886866705,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n-import 'package:elite_capture_f/utils/helpers.dart';\r\n import 'package:essential_control_pc/utils/shared_preferences/s_p_settings.dart';\r\n import 'package:flutter_bloc/flutter_bloc.dart';\r\n import 'package:equatable/equatable.dart';\r\n \r\n"
+                }
+            ],
+            "date": 1694886824458,
+            "name": "Commit-0",
+            "content": "import 'package:elite_capture_f/utils/helpers.dart';\r\nimport 'package:essential_control_pc/utils/shared_preferences/s_p_settings.dart';\r\nimport 'package:flutter_bloc/flutter_bloc.dart';\r\nimport 'package:equatable/equatable.dart';\r\n\r\npart 'dark_mode_event.dart';\r\npart 'dark_mode_state.dart';\r\n\r\nfinal prefs = SharedPrerencesSettins();\r\n\r\nclass DarkModeBloc extends Bloc<DarkModeEvent, DarkModeState> {\r\n  DarkModeBloc() : super(const DarkModeState()) {\r\n    on<DarkModeInitial>((event, emit) async {\r\n      print(\"llego al estado intial\");\r\n    });\r\n\r\n    on<DarkModeChange>((event, emit) async {\r\n      //prefs.onDarkTheme = !prefs.onDarkTheme;\r\n      prefs.onDarkTheme = !prefs.onDarkTheme;\r\n      print(\"esta cambiando el estado a ${prefs.onDarkTheme}\");\r\n      emit(prefs.onDarkTheme ? darkModeDark() : darkModeLight());\r\n      emit(darkModeInitial());\r\n    });\r\n  }\r\n}\r\n"
+        }
+    ]
+}

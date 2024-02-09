@@ -1,0 +1,6 @@
+{
+  "appTitle": "essential_control_pc",
+  "@appTitle": {
+    "description": "The title of the application"
+  }
+}

@@ -1,0 +1,10 @@
+^C:\USERS\ALDAS\MYPROJECTS\ESSENTIAL_CONTROL\BUILD\WINDOWS\CMAKEFILES\42642B5ED9B6597D034E8DA62310A965\INSTALL_FORCE.RULE
+setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

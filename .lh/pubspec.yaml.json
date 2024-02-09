@@ -1,0 +1,38 @@
+{
+    "sourceFile": "pubspec.yaml",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1694885798141,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1694890060892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,12 +9,17 @@\n environment:\r\n   sdk: '>=2.18.5 <3.0.0'\r\n \r\n dependencies:\r\n+  bloc: ^8.1.2\r\n+  equatable: ^2.0.5\r\n   flutter:\r\n     sdk: flutter\r\n+  flutter_bloc: ^8.1.3\r\n   flutter_localizations:\r\n     sdk: flutter\r\n+  flutter_svg: ^1.1.6\r\n+  shared_preferences: ^2.2.0\r\n \r\n dev_dependencies:\r\n   flutter_test:\r\n     sdk: flutter\r\n@@ -29,13 +34,5 @@\n \r\n   assets:\r\n     # Add assets from the images directory to the application.\r\n     - assets/images/\r\n-\r\n-  fonts: \r\n-  - family: Montserrat\r\n-    fonts:\r\n-      - asset: assets/fonts/montserrat/Montserrat-Black.ttf\r\n-      - asset: assets/fonts/montserrat/Montserrat-Bold.ttf\r\n-        weight: 300\r\n-      - asset: assets/fonts/montserrat/Montserrat-Light.ttf\r\n-        weight: 300\r\n+    - assets/icon/\r\n"
+                },
+                {
+                    "date": 1694902011328,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,38 @@\n+name: essential_control_pc\r\n+description: A new Flutter project.\r\n+\r\n+# Prevent accidental publishing to pub.dev.\r\n+publish_to: 'none'\r\n+\r\n+version: 1.0.0+1\r\n+\r\n+environment:\r\n+  sdk: '>=2.18.5 <3.0.0'\r\n+\r\n+dependencies:\r\n+  bloc: ^8.1.2\r\n+  equatable: ^2.0.5\r\n+  flutter:\r\n+    sdk: flutter\r\n+  flutter_bloc: ^8.1.3\r\n+  flutter_localizations:\r\n+    sdk: flutter\r\n+  flutter_svg: ^1.1.6\r\n+  shared_preferences: ^2.2.0\r\n+\r\n+dev_dependencies:\r\n+  flutter_test:\r\n+    sdk: flutter\r\n+\r\n+  flutter_lints: ^2.0.0\r\n+\r\n+flutter:\r\n+  uses-material-design: true\r\n+\r\n+  # Enable generation of localized Strings from arb files.\r\n+  generate: true\r\n+\r\n+  assets:\r\n+    # Add assets from the images directory to the application.\r\n+    - assets/images/\r\n+    - assets/icon/\r\n"
+                },
+                {
+                    "date": 1694902193989,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,42 @@\n+name: essential_control_pc\r\n+description: A new Flutter project.\r\n+\r\n+# Prevent accidental publishing to pub.dev.\r\n+publish_to: 'none'\r\n+\r\n+version: 1.0.0+1\r\n+\r\n+environment:\r\n+  sdk: '>=2.18.5 <3.0.0'\r\n+\r\n+dependencies:\r\n+  bloc: ^8.1.2\r\n+  equatable: ^2.0.5\r\n+  flutter:\r\n+    sdk: flutter\r\n+  flutter_bloc: ^8.1.3\r\n+  flutter_localizations:\r\n+    sdk: flutter\r\n+  flutter_blue:  \r\n+    git: \r\n+      url: https://github.com/boskokg/flutter_blue/\r\n+        ref: 0.11.0\r\n+  flutter_svg: ^1.1.6\r\n+  shared_preferences: ^2.2.0\r\n+\r\n+dev_dependencies:\r\n+  flutter_test:\r\n+    sdk: flutter\r\n+\r\n+  flutter_lints: ^2.0.0\r\n+\r\n+flutter:\r\n+  uses-material-design: true\r\n+\r\n+  # Enable generation of localized Strings from arb files.\r\n+  generate: true\r\n+\r\n+  assets:\r\n+    # Add assets from the images directory to the application.\r\n+    - assets/images/\r\n+    - assets/icon/\r\n"
+                },
+                {
+                    "date": 1694902215975,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     sdk: flutter\r\n   flutter_blue:  \r\n     git: \r\n       url: https://github.com/boskokg/flutter_blue/\r\n-        ref: 0.11.0\r\n+      ref: 0.11.0\r\n   flutter_svg: ^1.1.6\r\n   shared_preferences: ^2.2.0\r\n \r\n dev_dependencies:\r\n"
+                },
+                {
+                    "date": 1695519111806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,18 +11,17 @@\n \r\n dependencies:\r\n   bloc: ^8.1.2\r\n   equatable: ^2.0.5\r\n+  file_picker: ^5.3.1\r\n   flutter:\r\n     sdk: flutter\r\n   flutter_bloc: ^8.1.3\r\n   flutter_localizations:\r\n     sdk: flutter\r\n-  flutter_blue:  \r\n-    git: \r\n-      url: https://github.com/boskokg/flutter_blue/\r\n-      ref: 0.11.0\r\n   flutter_svg: ^1.1.6\r\n+  network_info_plus: ^3.0.5\r\n+  permission_handler: ^10.3.0\r\n   shared_preferences: ^2.2.0\r\n \r\n dev_dependencies:\r\n   flutter_test:\r\n@@ -39,80 +38,5 @@\n   assets:\r\n     # Add assets from the images directory to the application.\r\n     - assets/images/\r\n     - assets/icon/\r\n-name: essential_control_pc\r\n-description: A new Flutter project.\r\n-\r\n-# Prevent accidental publishing to pub.dev.\r\n-publish_to: 'none'\r\n-\r\n-version: 1.0.0+1\r\n-\r\n-environment:\r\n-  sdk: '>=2.18.5 <3.0.0'\r\n-\r\n-dependencies:\r\n-  bloc: ^8.1.2\r\n-  equatable: ^2.0.5\r\n-  flutter:\r\n-    sdk: flutter\r\n-  flutter_bloc: ^8.1.3\r\n-  flutter_localizations:\r\n-    sdk: flutter\r\n-  flutter_svg: ^1.1.6\r\n-  shared_preferences: ^2.2.0\r\n-\r\n-dev_dependencies:\r\n-  flutter_test:\r\n-    sdk: flutter\r\n-\r\n-  flutter_lints: ^2.0.0\r\n-\r\n-flutter:\r\n-  uses-material-design: true\r\n-\r\n-  # Enable generation of localized Strings from arb files.\r\n-  generate: true\r\n-\r\n-  assets:\r\n-    # Add assets from the images directory to the application.\r\n-    - assets/images/\r\n-    - assets/icon/\r\n-name: essential_control_pc\r\n-description: A new Flutter project.\r\n-\r\n-# Prevent accidental publishing to pub.dev.\r\n-publish_to: 'none'\r\n-\r\n-version: 1.0.0+1\r\n-\r\n-environment:\r\n-  sdk: '>=2.18.5 <3.0.0'\r\n-\r\n-dependencies:\r\n-  bloc: ^8.1.2\r\n-  equatable: ^2.0.5\r\n-  flutter:\r\n-    sdk: flutter\r\n-  flutter_bloc: ^8.1.3\r\n-  flutter_localizations:\r\n-    sdk: flutter\r\n-  flutter_svg: ^1.1.6\r\n-  shared_preferences: ^2.2.0\r\n-\r\n-dev_dependencies:\r\n-  flutter_test:\r\n-    sdk: flutter\r\n-\r\n-  flutter_lints: ^2.0.0\r\n-\r\n-flutter:\r\n-  uses-material-design: true\r\n-\r\n-  # Enable generation of localized Strings from arb files.\r\n-  generate: true\r\n-\r\n-  assets:\r\n-    # Add assets from the images directory to the application.\r\n-    - assets/images/\r\n-    - assets/icon/\r\n+    - assets/icon_media/\r\n"
+                }
+            ],
+            "date": 1694885798141,
+            "name": "Commit-0",
+            "content": "name: essential_control_pc\r\ndescription: A new Flutter project.\r\n\r\n# Prevent accidental publishing to pub.dev.\r\npublish_to: 'none'\r\n\r\nversion: 1.0.0+1\r\n\r\nenvironment:\r\n  sdk: '>=2.18.5 <3.0.0'\r\n\r\ndependencies:\r\n  flutter:\r\n    sdk: flutter\r\n  flutter_localizations:\r\n    sdk: flutter\r\n\r\ndev_dependencies:\r\n  flutter_test:\r\n    sdk: flutter\r\n\r\n  flutter_lints: ^2.0.0\r\n\r\nflutter:\r\n  uses-material-design: true\r\n\r\n  # Enable generation of localized Strings from arb files.\r\n  generate: true\r\n\r\n  assets:\r\n    # Add assets from the images directory to the application.\r\n    - assets/images/\r\n\r\n  fonts: \r\n  - family: Montserrat\r\n    fonts:\r\n      - asset: assets/fonts/montserrat/Montserrat-Black.ttf\r\n      - asset: assets/fonts/montserrat/Montserrat-Bold.ttf\r\n        weight: 300\r\n      - asset: assets/fonts/montserrat/Montserrat-Light.ttf\r\n        weight: 300\r\n"
+        }
+    ]
+}

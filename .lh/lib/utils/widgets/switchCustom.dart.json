@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/utils/widgets/switchCustom.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1694889239920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1694889239920,
+            "name": "Commit-0",
+            "content": "// ignore_for_file: file_names, no_logic_in_create_state\r\nimport 'package:flutter/material.dart';\r\n\r\nimport '../../style/styles/dark_ligth_theme.dart';\r\n\r\nclass SwitchCustom extends StatefulWidget {\r\n  bool active;\r\n  Function() funActive, funInactive;\r\n  SwitchCustom(this.active, this.funActive, this.funInactive);\r\n\r\n  @override\r\n  State<SwitchCustom> createState() =>\r\n      _SwitchCustomState(active, funActive, funInactive);\r\n}\r\n\r\nclass _SwitchCustomState extends State<SwitchCustom> {\r\n  bool active;\r\n  Function() funActive, funInactive;\r\n\r\n  _SwitchCustomState(this.active, this.funActive, this.funInactive);\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return GestureDetector(\r\n        onTap: () {\r\n          setState(() {\r\n            active = !active;\r\n            if (active) {\r\n              funActive();\r\n            } else {\r\n              funInactive();\r\n            }\r\n          });\r\n        },\r\n        child: AnimatedContainer(\r\n            duration: const Duration(milliseconds: 500),\r\n            curve: Curves.decelerate,\r\n            width: 50,\r\n            height: 25,\r\n            decoration: BoxDecoration(\r\n              borderRadius: BorderRadius.circular(50.0),\r\n              color: active\r\n                  ? darkLightTheme().getPrimaryColor()\r\n                  : Color(0xff696F70).withOpacity(0.15),\r\n            ),\r\n            child: AnimatedAlign(\r\n                duration: const Duration(milliseconds: 300),\r\n                alignment:\r\n                    active ? Alignment.centerRight : Alignment.centerLeft,\r\n                curve: Curves.decelerate,\r\n                child: Padding(\r\n                    padding: const EdgeInsets.all(2.0),\r\n                    child: Container(\r\n                      width: 20,\r\n                      height: 24,\r\n                      decoration: BoxDecoration(\r\n                          color: const Color(0xffffffff),\r\n                          borderRadius: BorderRadius.circular(100.0)),\r\n                    )))));\r\n  }\r\n}\r\n"
+        }
+    ]
+}

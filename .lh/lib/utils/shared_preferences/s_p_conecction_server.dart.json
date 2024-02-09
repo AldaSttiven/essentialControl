@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/utils/shared_preferences/s_p_conecction_server.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1695498600023,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1695498600023,
+            "name": "Commit-0",
+            "content": "import 'package:shared_preferences/shared_preferences.dart';\r\n\r\nclass SharedPrerencesConnectionServer {\r\n  // implementando el patron singleton para que solo se genere una instancie unica para toda la aplicacion\r\n  static final SharedPrerencesConnectionServer _instancia =\r\n      SharedPrerencesConnectionServer._internal();\r\n\r\n  // constructor factory\r\n  factory SharedPrerencesConnectionServer() {\r\n    return _instancia;\r\n  }\r\n\r\n  SharedPrerencesConnectionServer._internal();\r\n\r\n  // se inicializa\r\n  late SharedPreferences _prefs;\r\n\r\n  initPrefs() async {\r\n    // se hace privado para garantizar que no se accesible desde afuera\r\n    _prefs = await SharedPreferences.getInstance();\r\n  }\r\n\r\n  String get ipPort {\r\n    return _prefs.getString('ipPort') ?? \"not found\";\r\n  }\r\n\r\n  set ipPort(String value) {\r\n    _prefs.setString('ipPort', value);\r\n  }\r\n}\r\n"
+        }
+    ]
+}

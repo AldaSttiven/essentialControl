@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/utils/widgets/checkBoxCustom.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1694889239919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1694889239919,
+            "name": "Commit-0",
+            "content": "import 'package:essential_control_pc/style/styles/dark_ligth_theme.dart';\r\nimport 'package:flutter/material.dart';\r\n\r\n\r\nclass CheckBoxCustom extends StatefulWidget {\r\n  bool check;\r\n  Function funActive, funInactive;\r\n\r\n  CheckBoxCustom(this.check, this.funActive, this.funInactive, {Key? key})\r\n      : super(key: key);\r\n\r\n  @override\r\n  State<CheckBoxCustom> createState() =>\r\n      // ignore: no_logic_in_create_state\r\n      _CheckBoxCustomState(check, funActive, funInactive);\r\n}\r\n\r\nclass _CheckBoxCustomState extends State<CheckBoxCustom> {\r\n  bool check;\r\n  Function funActive, funInactive;\r\n\r\n  _CheckBoxCustomState(this.check, this.funActive, this.funInactive);\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    //print(\"seleccion en checkBox Widget ${this.check}\");\r\n    return InkWell(\r\n      onTap: () {\r\n        setState(() {\r\n          check = !check;\r\n          if (check) {\r\n            funActive();\r\n          } else {\r\n            funInactive();\r\n          }\r\n        });\r\n      },\r\n      child: Container(\r\n        height: 28,\r\n        width: 28,\r\n        decoration: BoxDecoration(\r\n            borderRadius: BorderRadius.all(Radius.circular(8.0)),\r\n            shape: BoxShape.rectangle,\r\n            color: Colors.transparent,\r\n            border: Border.all(\r\n                width: 1,\r\n                color: check\r\n                    ? darkLightTheme().getPrimaryColor()\r\n                    : darkLightTheme().greyDetail())),\r\n        child: Padding(\r\n            padding: const EdgeInsets.all(3.0),\r\n            child: check\r\n                ? Icon(\r\n                    Icons.check,\r\n                    size: 18.0,\r\n                    color: darkLightTheme().getPrimaryColor(),\r\n                  )\r\n                : Container()),\r\n      ),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "sourceFile": "lib/routes/routes.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1694886852630,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1694887814267,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import 'package:essential_control_pc/screens/principal/principal.dart';\r\n+import 'package:essential_control_pc/screen/principal/principal.dart';\r\n import 'package:essential_control_pc/utils/bloc/dark_mode/dark_mode_bloc.dart';\r\n import 'package:flutter/material.dart';\r\n import 'package:flutter_bloc/flutter_bloc.dart';\r\n import 'package:nested/nested.dart';\r\n"
+                }
+            ],
+            "date": 1694886852630,
+            "name": "Commit-0",
+            "content": "\r\nimport 'package:essential_control_pc/screens/principal/principal.dart';\r\nimport 'package:essential_control_pc/utils/bloc/dark_mode/dark_mode_bloc.dart';\r\nimport 'package:flutter/material.dart';\r\nimport 'package:flutter_bloc/flutter_bloc.dart';\r\nimport 'package:nested/nested.dart';\r\n\r\nMap<String, WidgetBuilder> getApplicationRoutes() {\r\n  return <String, WidgetBuilder>{\r\n    //clock\r\n    Principal.routeName: (BuildContext context) =>\r\n        MultiBlocProvider(providers: providers, child: const Principal()),\r\n  };\r\n}\r\n\r\nList<SingleChildWidget> get providers =>\r\n    [BlocProvider<DarkModeBloc>(create: (_) => DarkModeBloc())];\r\n"
+        }
+    ]
+}

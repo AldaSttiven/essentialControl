@@ -1,0 +1,38 @@
+{
+    "sourceFile": "lib/utils/commands/commands.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1695526969113,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695527028485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n   List<Message> lstMsg;\r\n   Commands(this.lstMsg);\r\n \r\n   run() {\r\n-    print(\"el primer comando es : ${lstMsg[0]}\");\r\n+    print(\"el primer comando es desde la clase de comandos : ${lstMsg[0]}\");\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1695527169702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n   List<Message> lstMsg;\r\n   Commands(this.lstMsg);\r\n \r\n   run() {\r\n-    print(\"el primer comando es desde la clase de comandos : ${lstMsg[0]}\");\r\n+    print(\"el primer comando es desde la clase de comandos : ${lstMsg[0].msg}\");\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1695527580704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,16 @@\n   Commands(this.lstMsg);\r\n \r\n   run() {\r\n     print(\"el primer comando es desde la clase de comandos : ${lstMsg[0].msg}\");\r\n+\r\n+    switch (lstMsg[0].module) {\r\n+      case \"windows\":\r\n+        _comandsWindows(lstMsg[0]);\r\n+        break;\r\n+    }\r\n   }\r\n+\r\n+  _comandsWindows(Message m) {\r\n+\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1695527600543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,6 +13,8 @@\n         break;\r\n     }\r\n   }\r\n \r\n-  _comandsWindows(Message m) {}\r\n+  _comandsWindows(Message m) {\r\n+    print(\"el comando es : ${m.command}\");\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1695527984332,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,10 @@\n       case \"windows\":\r\n         _comandsWindows(lstMsg[0]);\r\n         break;\r\n     }\r\n+\r\n+    _comandsWindows(lstMsg[0]);\r\n   }\r\n \r\n   _comandsWindows(Message m) {\r\n     print(\"el comando es : ${m.command}\");\r\n"
+                }
+            ],
+            "date": 1695526969113,
+            "name": "Commit-0",
+            "content": "import 'package:essential_control_pc/utils/server/start_server.dart';\r\n\r\nclass Commands {\r\n  List<Message> lstMsg;\r\n  Commands(this.lstMsg);\r\n\r\n  run() {\r\n    print(\"el primer comando es : ${lstMsg[0]}\");\r\n  }\r\n}\r\n"
+        }
+    ]
+}
