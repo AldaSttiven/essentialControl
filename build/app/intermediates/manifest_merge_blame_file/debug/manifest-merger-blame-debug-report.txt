@@ -1,0 +1,178 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.essentialsapps.essential_control_pc"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="33" />
+10    <!--
+11         The INTERNET permission is required for development. Specifically,
+12         the Flutter tool needs it to communicate with the running application
+13         to allow setting breakpoints, to provide hot reload, etc.
+14    -->
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->C:\Users\aldas\myProjects\essential_control\android\app\src\debug\AndroidManifest.xml:7:6-68
+15-->C:\Users\aldas\myProjects\essential_control\android\app\src\debug\AndroidManifest.xml:7:23-65
+16    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+16-->C:\Users\aldas\myProjects\essential_control\android\app\src\main\AndroidManifest.xml:39:5-79
+16-->C:\Users\aldas\myProjects\essential_control\android\app\src\main\AndroidManifest.xml:39:22-77
+17    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+17-->C:\Users\aldas\myProjects\essential_control\android\app\src\main\AndroidManifest.xml:38:5-80
+17-->C:\Users\aldas\myProjects\essential_control\android\app\src\main\AndroidManifest.xml:38:22-78
+18    <uses-permission
+18-->C:\Users\aldas\myProjects\essential_control\android\app\src\debug\AndroidManifest.xml:11:5-12:38
+19        android:name="android.permission.BLUETOOTH"
+19-->C:\Users\aldas\myProjects\essential_control\android\app\src\debug\AndroidManifest.xml:11:22-65
+20        android:maxSdkVersion="30" />
+20-->C:\Users\aldas\myProjects\essential_control\android\app\src\debug\AndroidManifest.xml:12:9-35
+21    <uses-permission
+21-->C:\Users\aldas\myProjects\essential_control\android\app\src\debug\AndroidManifest.xml:13:5-14:38
+22        android:name="android.permission.BLUETOOTH_ADMIN"
+22-->C:\Users\aldas\myProjects\essential_control\android\app\src\debug\AndroidManifest.xml:13:22-71
+23        android:maxSdkVersion="30" />
+23-->C:\Users\aldas\myProjects\essential_control\android\app\src\debug\AndroidManifest.xml:14:9-35
+24    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+24-->C:\Users\aldas\myProjects\essential_control\android\app\src\debug\AndroidManifest.xml:16:5-73
+24-->C:\Users\aldas\myProjects\essential_control\android\app\src\debug\AndroidManifest.xml:16:22-70
+25    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+25-->C:\Users\aldas\myProjects\essential_control\android\app\src\debug\AndroidManifest.xml:19:5-78
+25-->C:\Users\aldas\myProjects\essential_control\android\app\src\debug\AndroidManifest.xml:19:22-75
+26    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+26-->C:\Users\aldas\myProjects\essential_control\android\app\src\debug\AndroidManifest.xml:21:5-76
+26-->C:\Users\aldas\myProjects\essential_control\android\app\src\debug\AndroidManifest.xml:21:22-73
+27    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+27-->C:\Users\aldas\myProjects\essential_control\android\app\src\main\AndroidManifest.xml:36:5-79
+27-->C:\Users\aldas\myProjects\essential_control\android\app\src\main\AndroidManifest.xml:36:22-76
+28    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+28-->C:\Users\aldas\myProjects\essential_control\android\app\src\main\AndroidManifest.xml:35:5-81
+28-->C:\Users\aldas\myProjects\essential_control\android\app\src\main\AndroidManifest.xml:35:22-78
+29    <uses-permission android:name="android.permission.CAMERA" />
+29-->C:\Users\aldas\myProjects\essential_control\android\app\src\main\AndroidManifest.xml:37:5-65
+29-->C:\Users\aldas\myProjects\essential_control\android\app\src\main\AndroidManifest.xml:37:22-62
+30    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+30-->C:\Users\aldas\myProjects\essential_control\android\app\src\main\AndroidManifest.xml:40:5-82
+30-->C:\Users\aldas\myProjects\essential_control\android\app\src\main\AndroidManifest.xml:40:22-80
+31    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+31-->C:\Users\aldas\myProjects\essential_control\android\app\src\main\AndroidManifest.xml:41:5-75
+31-->C:\Users\aldas\myProjects\essential_control\android\app\src\main\AndroidManifest.xml:41:22-72
+32    <uses-permission android:name="android.permission.DELETE_PACKAGES" />
+32-->C:\Users\aldas\myProjects\essential_control\android\app\src\main\AndroidManifest.xml:42:5-74
+32-->C:\Users\aldas\myProjects\essential_control\android\app\src\main\AndroidManifest.xml:42:22-71
+33    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+33-->[:network_info_plus] C:\Users\aldas\myProjects\essential_control\build\network_info_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-79
+33-->[:network_info_plus] C:\Users\aldas\myProjects\essential_control\build\network_info_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:9:22-76
+34    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+34-->[:network_info_plus] C:\Users\aldas\myProjects\essential_control\build\network_info_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-76
+34-->[:network_info_plus] C:\Users\aldas\myProjects\essential_control\build\network_info_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-73
+35
+36    <uses-feature android:name="android.hardware.camera" />
+36-->[:flutter_barcode_scanner] C:\Users\aldas\myProjects\essential_control\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-60
+36-->[:flutter_barcode_scanner] C:\Users\aldas\myProjects\essential_control\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:11:19-57
+37
+38    <uses-permission android:name="android.permission.FLASHLIGHT" />
+38-->[:flutter_barcode_scanner] C:\Users\aldas\myProjects\essential_control\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-69
+38-->[:flutter_barcode_scanner] C:\Users\aldas\myProjects\essential_control\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:13:22-66
+39
+40    <application
+41        android:name="android.app.Application"
+42        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+42-->[androidx.core:core:1.8.0] C:\Users\aldas\.gradle\caches\transforms-3\d363e3b5616f580c766e3e2b3c05f27d\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
+43        android:debuggable="true"
+44        android:icon="@mipmap/ic_launcher"
+45        android:label="essential_control_pc"
+46        android:largeHeap="true"
+46-->[:flutter_barcode_scanner] C:\Users\aldas\myProjects\essential_control\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:16:9-33
+47        android:theme="@style/Theme.AppCompat.NoActionBar" >
+47-->[:flutter_barcode_scanner] C:\Users\aldas\myProjects\essential_control\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:17:9-59
+48        <activity
+49            android:name="com.essentialsapps.essential_control_pc.MainActivity"
+50            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+51            android:exported="true"
+52            android:hardwareAccelerated="true"
+53            android:launchMode="singleTop"
+54            android:theme="@style/LaunchTheme"
+55            android:windowSoftInputMode="adjustResize" >
+56
+57            <!--
+58                 Specifies an Android theme to apply to this Activity as soon as
+59                 the Android process has started. This theme is visible to the user
+60                 while the Flutter UI initializes. After that, this theme continues
+61                 to determine the Window background behind the Flutter UI.
+62            -->
+63            <meta-data
+64                android:name="io.flutter.embedding.android.NormalTheme"
+65                android:resource="@style/NormalTheme" />
+66
+67            <intent-filter>
+68                <action android:name="android.intent.action.MAIN" />
+69
+70                <category android:name="android.intent.category.LAUNCHER" />
+71            </intent-filter>
+72        </activity>
+73        <!--
+74             Don't delete the meta-data below.
+75             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+76        -->
+77        <meta-data
+78            android:name="flutterEmbedding"
+79            android:value="2" />
+80
+81        <activity android:name="com.amolg.flutterbarcodescanner.BarcodeCaptureActivity" />
+81-->[:flutter_barcode_scanner] C:\Users\aldas\myProjects\essential_control\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:18:9-91
+81-->[:flutter_barcode_scanner] C:\Users\aldas\myProjects\essential_control\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:18:19-88
+82
+83        <uses-library
+83-->[androidx.window:window:1.0.0-beta04] C:\Users\aldas\.gradle\caches\transforms-3\49bc944d29f70d45aa5add8e43e3247e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+84            android:name="androidx.window.extensions"
+84-->[androidx.window:window:1.0.0-beta04] C:\Users\aldas\.gradle\caches\transforms-3\49bc944d29f70d45aa5add8e43e3247e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+85            android:required="false" />
+85-->[androidx.window:window:1.0.0-beta04] C:\Users\aldas\.gradle\caches\transforms-3\49bc944d29f70d45aa5add8e43e3247e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+86        <uses-library
+86-->[androidx.window:window:1.0.0-beta04] C:\Users\aldas\.gradle\caches\transforms-3\49bc944d29f70d45aa5add8e43e3247e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+87            android:name="androidx.window.sidecar"
+87-->[androidx.window:window:1.0.0-beta04] C:\Users\aldas\.gradle\caches\transforms-3\49bc944d29f70d45aa5add8e43e3247e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+88            android:required="false" />
+88-->[androidx.window:window:1.0.0-beta04] C:\Users\aldas\.gradle\caches\transforms-3\49bc944d29f70d45aa5add8e43e3247e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+89
+90        <activity
+90-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\aldas\.gradle\caches\transforms-3\6068c20e673d4349a1bd1f4e3933aa39\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:23:9-26:75
+91            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+91-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\aldas\.gradle\caches\transforms-3\6068c20e673d4349a1bd1f4e3933aa39\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:24:13-79
+92            android:exported="false"
+92-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\aldas\.gradle\caches\transforms-3\6068c20e673d4349a1bd1f4e3933aa39\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:25:13-37
+93            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+93-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\aldas\.gradle\caches\transforms-3\6068c20e673d4349a1bd1f4e3933aa39\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:26:13-72
+94
+95        <meta-data
+95-->[com.google.android.gms:play-services-basement:17.4.0] C:\Users\aldas\.gradle\caches\transforms-3\8126e1f02fbd5b999f38c6a32c8e233c\transformed\jetified-play-services-basement-17.4.0\AndroidManifest.xml:23:9-25:69
+96            android:name="com.google.android.gms.version"
+96-->[com.google.android.gms:play-services-basement:17.4.0] C:\Users\aldas\.gradle\caches\transforms-3\8126e1f02fbd5b999f38c6a32c8e233c\transformed\jetified-play-services-basement-17.4.0\AndroidManifest.xml:24:13-58
+97            android:value="@integer/google_play_services_version" />
+97-->[com.google.android.gms:play-services-basement:17.4.0] C:\Users\aldas\.gradle\caches\transforms-3\8126e1f02fbd5b999f38c6a32c8e233c\transformed\jetified-play-services-basement-17.4.0\AndroidManifest.xml:25:13-66
+98
+99        <provider
+99-->[androidx.emoji2:emoji2:1.2.0] C:\Users\aldas\.gradle\caches\transforms-3\9fc546b4b41c30406c1c6f8de93a0c6d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+100            android:name="androidx.startup.InitializationProvider"
+100-->[androidx.emoji2:emoji2:1.2.0] C:\Users\aldas\.gradle\caches\transforms-3\9fc546b4b41c30406c1c6f8de93a0c6d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+101            android:authorities="com.essentialsapps.essential_control_pc.androidx-startup"
+101-->[androidx.emoji2:emoji2:1.2.0] C:\Users\aldas\.gradle\caches\transforms-3\9fc546b4b41c30406c1c6f8de93a0c6d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+102            android:exported="false" >
+102-->[androidx.emoji2:emoji2:1.2.0] C:\Users\aldas\.gradle\caches\transforms-3\9fc546b4b41c30406c1c6f8de93a0c6d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+103            <meta-data
+103-->[androidx.emoji2:emoji2:1.2.0] C:\Users\aldas\.gradle\caches\transforms-3\9fc546b4b41c30406c1c6f8de93a0c6d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+104                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+104-->[androidx.emoji2:emoji2:1.2.0] C:\Users\aldas\.gradle\caches\transforms-3\9fc546b4b41c30406c1c6f8de93a0c6d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+105                android:value="androidx.startup" />
+105-->[androidx.emoji2:emoji2:1.2.0] C:\Users\aldas\.gradle\caches\transforms-3\9fc546b4b41c30406c1c6f8de93a0c6d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+106            <meta-data
+106-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\aldas\.gradle\caches\transforms-3\c7dc2d946f639e7b414f5fbe78913a76\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+107                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+107-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\aldas\.gradle\caches\transforms-3\c7dc2d946f639e7b414f5fbe78913a76\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+108                android:value="androidx.startup" />
+108-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\aldas\.gradle\caches\transforms-3\c7dc2d946f639e7b414f5fbe78913a76\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+109        </provider>
+110    </application>
+111
+112</manifest>
